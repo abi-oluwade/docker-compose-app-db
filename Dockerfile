@@ -2,11 +2,11 @@ FROM node:10
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package.json ./
 
 RUN npm install
 
-ENV DB_HOST=mongod://localhost:27017/posts
+ENV DB_HOST=mongodb://mongo:27017/posts
 
 COPY . .
 
