@@ -1,5 +1,14 @@
 # Sparta Node Sample App
 
+This is using docker compose to create two containers that are linked via the environmental variables in the Dockerfile
+thats connects the app container to the mongo container.
+
+````
+ENV DB_HOST=mongodb://mongo:27017/posts
+````
+The above line in the dockerfile uses 'mongo' instead of localhost as it is not trying to connect to the localhost machine
+but rather the container named 'mongo' which was specified in the docker compose.
+
 ## Description
 
 This app is intended for use with the Sparta Global Devops Stream as a sample app. You can clone the repo and use it as is but no changes will be accepted on this branch.
