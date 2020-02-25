@@ -1,13 +1,31 @@
 # Sparta Node Sample App
 
 This is using docker compose to create two containers that are linked via the environmental variables in the Dockerfile
-thats connects the app container to the mongo container.
+that connects the app container to the mongo container.
 
 ````
 ENV DB_HOST=mongodb://mongo:27017/posts
 ````
-The above line in the dockerfile uses 'mongo' instead of localhost as it is not trying to connect to the localhost machine
+The above line in the Dockerfile uses 'mongo' instead of localhost as it is not trying to connect to the localhost machine
 but rather the container named 'mongo' which was specified in the docker compose.
+
+When creating the Jenkins ci pipeline, I have emailed to abi.oluwade@gmail.com the instructions to create a slave node, and also to sort out the git SCM you must add the deploy key and have the corresponding private key in your credentials on the Jenkins server.
+
+*Restrict where this project can run* in the GENERAL section on Jenkins config allows us to pick
+a node or slave for the job to be carried out on.
+
+
+
+
+
+
+
+
+
+
+
+========================================================================================================================================================================================================
+
 
 ## Description
 
@@ -66,9 +84,3 @@ npm test
 ```
 
 The test for posts will fail ( as expected ) if the database has not been correctly setup.
-
-<<<<<<< HEAD
-## TESTING  JENKINS AUTOMATION ## MASTER BRANCH
-=======
-## TESTING  JENKINS AUTOMATION ## AGAIN dev branch ONLY BUILD WITHOUT REDELIVER
->>>>>>> dev
