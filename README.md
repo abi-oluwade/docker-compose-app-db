@@ -99,8 +99,12 @@ TEST JENKINS WEBHOOK
 
 
 
-
-
+````
+cd jenkinsproduction/home/workspace
+docker build docker-app-cd -t abioluwade/app-apache-3:latest
+docker push abioluwade/app-apache-3:latest
+````
+ Try and get this logic to work.
 
 
 
